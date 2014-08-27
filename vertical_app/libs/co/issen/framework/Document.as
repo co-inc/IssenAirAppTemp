@@ -113,7 +113,8 @@ package co.issen.framework
 		 */
 		protected function fromBackground(e:Event):void 
 		{
-			ISSEN::DEV {trace(["Document","fromBackground"])}
+			ISSEN::DEV { trace(["Document", "fromBackground"]) }
+			Sounds.mute = false;
 		}
 		
 		/**
@@ -122,7 +123,8 @@ package co.issen.framework
 		 */
 		protected function toBackground(e:Event):void 
 		{
-			ISSEN::DEV {trace(["Document","toBackground"])}
+			ISSEN::DEV { trace(["Document", "toBackground"]) }
+			Sounds.mute = true;
 		}
 		
 		/**

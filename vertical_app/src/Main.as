@@ -35,8 +35,23 @@ package
 		{
 			super.initialization(e);
 			fitContent(content);
+			SaveData.init("IssenAirAppTemp");//セーブ領域を設定します。ユニークな名前を設定してください
 			
 			//ここから
+			
+			//セーブサンプル
+			SaveData.setV("name", "issen");
+			trace("SaveData.userName=", SaveData.getV("name"));
+			
+			trace("SaveData.sample=",SaveData.sample);
+			SaveData.sample = 10;
+			trace("SaveData.sample=", SaveData.sample);
+			
+			SaveData.data.direct = "hoge";
+			SaveData.save();
+			
+			//サウンドサンプル
+			Sounds.changeBGM(Sounds.BGM_SAMPLE);
 		}
 		
 	}
